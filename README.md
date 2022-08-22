@@ -11,11 +11,17 @@ Referencing every individual packet is rather wastefull as a reference can easil
 1. Variation on the .tta-idea: Header followed by packets for each dump.
 2. Blocks of teletext packets referenced by header.
 
-### Header idea:
-* number of pages
-** page/subpage number: 
-** size/reference field
+### CaputureHeader idea:
+1. number of pages
+2. PID (just for reference)
+3. time of capture (unix epochs)
+for each page
+1. page/subpage number: 
+2. size/reference field (e.g positive => number of packets in page, negative => one header + reference back to n-th previous capture
+Maybe the header could have padding to a multiple of 42 octetts.
 
+### Data idea:
+Essentially t42
 
 # Old idea below:
 
