@@ -6,6 +6,17 @@ A format to deal with large amounts of teletext data and tools for it.
 
 Referencing every individual packet is rather wastefull as a reference can easily have 32 bits. Since those references take up most of the space of an archive, it seems more efficient to reference whole pages instead. This way those 32 bits would not just reference a row (42 octets) but a whole page. Since the header row is most likely unique, there is little use in having it referenced.
 
+## Implementation idea:
+
+1. Variation on the .tta-idea: Header followed by packets for each dump.
+2. Blocks of teletext packets referenced by header.
+
+### Header idea:
+* number of pages
+** page/subpage number: 
+** size/reference field
+
+
 # Old idea below:
 
 # Basic idea:
