@@ -21,7 +21,7 @@ for each page
 Maybe the header could have padding to a multiple of 42 octetts.
 
 ### Data idea:
-Essentially t42
+Essentially t42, size of block can be calculated via header.
 
 # Old idea below:
 
