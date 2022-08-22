@@ -1,6 +1,13 @@
 # teletext_archive
 A format to deal with large amounts of teletext data and tools for it.
 
+
+# Improved idea:
+
+Referencing every individual packet is rather wastefull as a reference can easily have 32 bits. Since those references take up most of the space of an archive, it seems more efficient to reference whole pages instead. This way those 32 bits would not just reference a row (42 octets) but a whole page. Since the header row is most likely unique, there is little use in having it referenced.
+
+# Old idea below:
+
 # Basic idea:
 Normal teletext dumps in tta or t42 format do not benefit from leaving out redundant information. For example a daily dump of a teletext service will
 store static pages in every dump even if they have not changed.
